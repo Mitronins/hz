@@ -37,6 +37,7 @@
   },
   "dependencies": {
     "axios": "^0.17.1",
+    "babel-plugin-transform-object-rest-spread": "^6.26.0",
     "image-webpack-loader": "^4.2.0",
     "inputmask": "^3.3.11",
     "prop-types": "^15.6.1",

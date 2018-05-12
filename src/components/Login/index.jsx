@@ -4,7 +4,7 @@ import axios from 'axios';
 import {connect} from 'react-redux';
 
 import styles from './styles.scss';
-import {setToken, setUser} from '../../AC';
+import {setToken} from '../../AC';
 
 class Login extends Component {
 
@@ -26,7 +26,7 @@ class Login extends Component {
         }
         this.setState({isLoad: true});
         try {
-            const response = await axios.post('http://localhost:8000/login/', {username, password});
+            const response = await axios.post('api/login/', {username, password});
             this.setState({isLoad: false});
             if (response.status === 200) {
                 localStorage.setItem('token', response.data.token);

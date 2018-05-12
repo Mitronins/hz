@@ -26,7 +26,7 @@ class Register extends Component {
         }
         this.setState({isEmptyFields: false, isLoad: true});
         try {
-            const response = await axios.post('http://localhost:8000/register/', {name, username, password});
+            const response = await axios.post('api/register/', {name, username, password});
             this.setState({isLoad: false});
             console.log(response);
         } catch (error) {
