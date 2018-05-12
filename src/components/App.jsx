@@ -16,7 +16,7 @@ import ListTests from './ListTests/index';
 import Register from './Register/index';
 import MainPage from './MainPage/index';
 
-const history = createHistory();
+export const history = createHistory();
 
 class App extends Component {
 
@@ -30,7 +30,7 @@ class App extends Component {
                         {this.props.auth && <Route exact path='/' component={MainPage}/>}
                         {this.props.auth && <Route exact path='/lessons' component={ListLessons}/>}
                         {this.props.auth && <Route exact path='/tests' component={ListTests}/>}
-                        {this.props.auth && <Route exact path='/lesson' component={Lesson}/>}
+                        {this.props.auth && <Route exact path='/lesson/:id' component={Lesson}/>}
                         {this.props.auth && <Route exact path='/test' component={Test}/>}
                         {this.props.auth && <Route exact path='/dictionary' component={Dictionary}/>}
                         <Route exact path='/login' component={Login}/>

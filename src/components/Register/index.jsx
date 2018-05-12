@@ -28,7 +28,9 @@ class Register extends Component {
         try {
             const response = await axios.post('api/register/', {name, username, password});
             this.setState({isLoad: false});
-            console.log(response);
+            if (response.status === 201) {
+                this.props.history.push('/login');
+            }
         } catch (error) {
             if (error.response.data.username[0] === 'A user with that username already exists.') {
                 console.log('asdasd');

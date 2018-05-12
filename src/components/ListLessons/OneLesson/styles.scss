@@ -6,11 +6,15 @@
   width: 800px;
   height: 80px;
   left: calc(50% - 400px);
-  background: #a1c6d3;
+  background: #75a9d3;
   border-radius: 10px;
+  cursor: pointer;
+  color: white;
+  text-decoration: none;
 
   &:hover {
-    background: #435bd0;
+    background: #7092a8;
+    color: white;
   }
 }
 
