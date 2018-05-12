@@ -1,0 +1,85 @@
+.container {
+  position: relative;
+  display: block;
+  margin: 10px 0;
+  top: 30px;
+  width: 800px;
+  height: 80px;
+  left: calc(50% - 400px);
+  background: #75a9d3;
+  border-radius: 10px;
+  cursor: pointer;
+  color: white;
+  text-decoration: none;
+
+  &:hover {
+    background: #7092a8;
+    color: white;
+  }
+}
+
+.container:first-child{
+  margin-top: 0;
+}
+
+.title {
+  top: 15px;
+  display: block;
+  position: relative;
+  font-size: 1.3em;
+  left: 30px;
+
+}
+
+.description {
+  display: block;
+  position: relative;
+  font-size: 1.1em;
+  left: 30px;
+  top: 20px;
+}
+
+.clock {
+  display: block;
+  position: absolute;
+  line-height: 30px;
+  right: 30px;
+  top: calc(50% - 25px);
+  width: 40px;
+  height: 40px;
+  background: url("./images/clock.svg") no-repeat center;
+  background-size: contain;
+}
+
+
+.spread {
+  display: block;
+  position: absolute;
+  right: 30px;
+  top: calc(50% - 25px);
+  width: 40px;
+  height: 40px;
+  background: url("./images/book.svg") no-repeat center;
+  background-size: contain;
+}
+
+.check {
+  display: block;
+  position: absolute;
+  right: 30px;
+  top: calc(50% - 25px);
+  width: 40px;
+  height: 40px;
+  background: url("./images/check.svg") no-repeat center;
+  background-size: contain;
+}
+
+.status{
+  width: 80px;
+  font-size: .9em;
+  position: absolute;
+  display: block;
+  right: 10px;
+  bottom: 5px;
+  text-align: center;
+}

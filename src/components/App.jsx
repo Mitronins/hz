@@ -31,7 +31,7 @@ class App extends Component {
                         {this.props.auth && <Route exact path='/lessons' component={ListLessons}/>}
                         {this.props.auth && <Route exact path='/tests' component={ListTests}/>}
                         {this.props.auth && <Route exact path='/lesson/:id' component={Lesson}/>}
-                        {this.props.auth && <Route exact path='/test' component={Test}/>}
+                        {this.props.auth && <Route exact path='/test/:id' component={Test}/>}
                         {this.props.auth && <Route exact path='/dictionary' component={Dictionary}/>}
                         <Route exact path='/login' component={Login}/>
                         <Route exact path='/register' component={Register}/>

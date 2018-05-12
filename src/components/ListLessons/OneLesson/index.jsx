@@ -4,7 +4,7 @@ import styles from './styles.scss';
 import {Link} from "react-router-dom";
 
 
-class ListLessons extends Component {
+class OneLesson extends Component {
 
     render() {
         const {lesson} = this.props;
@@ -24,4 +24,4 @@ class ListLessons extends Component {
 
 }
 
-export default ListLessons;
+export default OneLesson;
