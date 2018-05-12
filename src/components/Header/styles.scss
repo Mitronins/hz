@@ -28,8 +28,19 @@
   }
 }
 
-.element-menu {
-  position: relative;
+
+.exit {
   display: inline-block;
-  width: 100px;
+  position: fixed;
+  right: 0;
+  text-align: center;
+  line-height: 60px;
+  font-size: 1.3em;
+  text-decoration: none;
+  color: white;
+  width: 140px;
+
+  &:hover {
+    background-color: #34479c;
+  }
 }

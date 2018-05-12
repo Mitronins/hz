@@ -1,4 +1,4 @@
-import {AUTH, DELETE_AUTH} from "../constans";
+import {AUTH, DELETE_AUTH, SET_NAME} from "../constans";
 
 export function setToken(token) {
     return {
@@ -10,5 +10,18 @@ export function setToken(token) {
 export function deleteAuth() {
     return {
         type: DELETE_AUTH,
+    }
+}
+
+export function setUser(name) {
+    return {
+        type: SET_NAME,
+        data: {name}
+    }
+}
+
+export function deleteUser() {
+    return {
+        type: SET_NAME
     }
 }

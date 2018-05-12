@@ -15,8 +15,14 @@ class Header extends Component {
                     <Link to={'/lessons'}>Уроки</Link>
                     <Link to={'/tests'}>Тесты</Link>
                     <Link to={'/dictionary'}>Словарь</Link>
-                    <Link to={'/login'} onClick={this.handleExit}>Выход</Link>
                 </div>
+                <Link
+                    to={'/login'}
+                    className={styles.exit}
+                    onClick={this.handleExit}
+                >
+                    Выход
+                </Link>
             </div>
         );
     }
