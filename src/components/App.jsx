@@ -6,15 +6,15 @@ import {Router, Redirect} from "react-router-dom";
 import createHistory from 'history/createBrowserHistory';
 
 
-import Login from './Login';
-import Dictionary from './Dictionary';
-import Header from './Header';
-import Lesson from './Lesson';
-import ListLessons from './ListLessons';
-import Test from './Test';
-import ListTests from './ListTests';
-import Register from './Register';
-import MainPage from './MainPage';
+import Login from './Login/index';
+import Dictionary from './Dictionary/index';
+import Header from './Header/index';
+import Lesson from './Lesson/index';
+import ListLessons from './ListLessons/index';
+import Test from './Test/index';
+import ListTests from './ListTests/index';
+import Register from './Register/index';
+import MainPage from './MainPage/index';
 
 const history = createHistory();
 
@@ -25,7 +25,7 @@ class App extends Component {
         return (
             <Router history={history}>
                 <div>
-                    <Header />
+                    <Header/>
                     <Switch>
                         {this.props.auth && <Route exact path='/' component={MainPage}/>}
                         {this.props.auth && <Route exact path='/lessons' component={ListLessons}/>}

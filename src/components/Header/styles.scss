@@ -9,8 +9,8 @@
 .menu {
   display: inline-block;
   position: relative;
-  width: 700px;
-  left: calc(50% - 350px);
+  width: 600px;
+  left: calc(50% - 300px);
 
   & a {
     text-align: center;
@@ -20,7 +20,7 @@
     display: inline-block;
     text-decoration: none;
     color: white;
-    width: 140px;
+    width: 150px;
 
     &:hover {
       background-color: #34479c;
@@ -38,7 +38,7 @@
   font-size: 1.3em;
   text-decoration: none;
   color: white;
-  width: 140px;
+  width: 150px;
 
   &:hover {
     background-color: #34479c;
