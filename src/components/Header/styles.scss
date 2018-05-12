@@ -1,0 +1,35 @@
+.container {
+  height: 60px;
+  width: 100%;
+  display: block;
+  position: fixed;
+  background-color: #435bd0;
+}
+
+.menu {
+  display: inline-block;
+  position: relative;
+  width: 700px;
+  left: calc(50% - 350px);
+
+  & a {
+    text-align: center;
+    line-height: 60px;
+    font-size: 1.3em;
+    position: relative;
+    display: inline-block;
+    text-decoration: none;
+    color: white;
+    width: 140px;
+
+    &:hover {
+      background-color: #34479c;
+    }
+  }
+}
+
+.element-menu {
+  position: relative;
+  display: inline-block;
+  width: 100px;
+}

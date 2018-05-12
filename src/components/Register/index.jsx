@@ -10,30 +10,53 @@ class Register extends Component {
         name: '',
         username: '',
         password: '',
-        isEmptyFields: false
+        isEmptyFields: false,
+        usernameTouched: false,
+        passwordTouched: false,
+        nameTouched: false,
+        isLoginUsed: false,
+        isLoad: false,
     };
 
     handleRegister = async () => {
         const {name, username, password} = this.state;
-        if (name.length === 0 || username.length === 0 || password.length === 0) this.setState({isEmptyFields: true});
-
+        if (name.length === 0 || username.length === 0 || password.length === 0) {
+            this.setState({isEmptyFields: true});
+            return;
+        }
+        this.setState({isEmptyFields: false, isLoad: true});
         try {
             const response = await axios.post('http://localhost:8000/register/', {name, username, password});
+            this.setState({isLoad: false});
             console.log(response);
         } catch (error) {
-            console.error(error);
+            if (error.response.data.username[0] === 'A user with that username already exists.') {
+                console.log('asdasd');
+                this.setState({isLoginUsed: true});
+            }
+            this.setState({isLoad: false});
+            console.error(error.response.data);
         }
 
     };
 
-    getClassName = type => this.state[type].length === 0
-        ? styles["form-input__error"] : '';
+    getClassName = type => {
+        const style = this.state[type].length === 0 ? styles["form-input__error"] : '';
+        const field = type + 'Touched';
+        if (this.state[field]) {
+            return style;
+        } else {
+            return '';
+        }
+    };
 
 
     handleChange = type => ev => {
+        const field = type + 'Touched';
         const {value} = ev.target;
         this.setState({
-            [type]: value
+            [type]: value,
+            [field]: true
         })
     };
 
@@ -59,8 +82,10 @@ class Register extends Component {
                     type="password"/>
                 <button
                     className={styles.register}
-                    onClick={this.handleRegister}>Регистрация</button>
+                    onClick={this.handleRegister}>Регистрация
+                </button>
                 {this.state.isEmptyFields && <div className={styles.err}>Заполните все поля</div>}
+                {this.state.isLoginUsed && <div className={styles.err}>Такой логин уже занят</div>}
             </div>
         );
     }

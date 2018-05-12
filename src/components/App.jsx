@@ -2,8 +2,9 @@ import React, {Component} from 'react';
 import {connect} from "react-redux";
 import Switch from "react-router-dom/es/Switch";
 import Route from "react-router-dom/es/Route";
+import {Router, Redirect} from "react-router-dom";
+import createHistory from 'history/createBrowserHistory';
 
-import {deleteAuth, setToken} from "../AC";
 
 import Login from './Login';
 import Dictionary from './Dictionary';
@@ -14,15 +15,17 @@ import Test from './Test';
 import ListTests from './ListTests';
 import Register from './Register';
 import MainPage from './MainPage';
-import {BrowserRouter, Redirect} from "react-router-dom";
 
+const history = createHistory();
 
 class App extends Component {
 
+
     render() {
         return (
-            <BrowserRouter>
+            <Router history={history}>
                 <div>
+                    <Header />
                     <Switch>
                         {this.props.auth && <Route exact path='/' component={MainPage}/>}
                         {this.props.auth && <Route exact path='/lessons' component={ListLessons}/>}
@@ -35,7 +38,7 @@ class App extends Component {
                         <Redirect to="/login"/>
                     </Switch>
                 </div>
-            </BrowserRouter>
+            </Router>
         );
     }
 }
