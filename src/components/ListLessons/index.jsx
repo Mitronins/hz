@@ -30,7 +30,6 @@ class ListLessons extends Component {
         });
 
         if (!isError) {
-            console.warn(allLessonsRes.data.results, myLessonsRes.data.results);
             this.setState({
                 lessons:this.setLessonsState(allLessonsRes.data.results, myLessonsRes.data.results)
             });
@@ -58,7 +57,6 @@ class ListLessons extends Component {
     render() {
         const {isLoading, isError} = this.state;
         const lessons = this.getListLessons();
-        console.log(lessons);
         return (
             <div className={styles.container}>
                 {isLoading && <div className={styles.loading}/>}

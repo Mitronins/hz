@@ -3,13 +3,15 @@ import request from "../../../utils/request";
 
 import styles from './styles.scss';
 
+import OneQuestion from './OneQuestion';
+
 
 class Test extends Component {
     state = {
         isLoading: true,
         isError: false,
         test: {
-            chapters: []
+            questions: []
         },
     };
 
@@ -34,9 +36,9 @@ class Test extends Component {
         const {id} = this.props.match.params;
         const token = 'Token ' + localStorage.getItem('token');
         const result = await request(`/api/tests/${id}/`, {}, 'get', {headers: {Authorization: token}});
+        console.log(result);
 
         const isError = Boolean(result.error);
-        console.log(isError);
         this.setState({
             isLoading: false,
             isError
@@ -50,6 +52,8 @@ class Test extends Component {
         }
     };
 
+    getQuestion = () => this.state.test.questions.map(question => <OneQuestion key={question.id} question={question} />);
+
     render() {
         const {isLoading, test, isError} = this.state;
         return (
@@ -59,6 +63,7 @@ class Test extends Component {
                 {!isError && !isLoading && <div>
                     <div className={styles.title}>{test.title}</div>
                     <div className={styles.description}>{test.description}</div>
+                    <div>{this.getQuestion()}</div>
                 </div>}
             </div>
         );

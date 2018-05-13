@@ -33,11 +33,9 @@ class Register extends Component {
             }
         } catch (error) {
             if (error.response.data.username[0] === 'A user with that username already exists.') {
-                console.log('asdasd');
                 this.setState({isLoginUsed: true});
             }
             this.setState({isLoad: false});
-            console.error(error.response.data);
         }
 
     };

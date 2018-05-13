@@ -49,7 +49,6 @@ class Lesson extends Component {
     };
 
     getChapters = (lesson) => {
-        console.log(lesson);
         return lesson.chapters.map(chapter =>
             <div key={chapter.id}>
                 <div className={styles.chapter}>{chapter.title}</div>
