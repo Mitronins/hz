@@ -43,7 +43,6 @@ class Test extends Component {
         const {id} = this.props.match.params;
         const token = 'Token ' + localStorage.getItem('token');
         const result = await request(`/api/tests/${id}/`, {}, 'get', {headers: {Authorization: token}});
-        console.log(result);
 
         const isError = Boolean(result.error);
         this.setState({
@@ -51,7 +50,6 @@ class Test extends Component {
             isError
         });
 
-        console.log(result.response.data);
         if (!isError) {
             this.setState({
                 test: result.response.data
@@ -91,7 +89,6 @@ class Test extends Component {
     }
 
     handleOkClick = () => {
-        console.log(typeof this.state.rightAnswers);
         if (Object.keys(this.state.rightAnswers).length !== this.state.test.questions.length) {
             alert('Ответьте на все вопросы');
             return;

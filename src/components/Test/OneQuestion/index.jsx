@@ -36,7 +36,6 @@ class OneQuestion extends Component {
                 question.answers[i].is_true ? this.props.getAnswer(question.id, true) : this.props.getAnswer(question.id, false);
             }
         }
-        console.log(this.state.selectedOption);
     };
 
     handleTextInput = (changeEvent) => {
