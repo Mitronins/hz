@@ -5,6 +5,11 @@ import styles from './styles.scss';
 
 class OneQuestion extends Component {
 
+    state = {
+        selectedOption: null,
+        text: ''
+    };
+
     getAnswers = () => {
         const {question} = this.props;
         const inputs = this.props.question.answers.map(answer =>
@@ -13,10 +18,33 @@ class OneQuestion extends Component {
                        type="radio"
                        id={answer.id}
                        name={question.id}
+                       checked={this.state.selectedOption === answer.text}
+                       onChange={this.handleOptionChange}
                        value={answer.text}/>
                 <label htmlFor={answer.id}>{answer.text}</label>
             </div>);
         return <div className={styles.answers}>{inputs}</div>
+    };
+
+    handleOptionChange = (changeEvent) => {
+        this.setState({
+            selectedOption: changeEvent.target.value
+        });
+        const {question} = this.props;
+        for (let i = 0; i < question.answers.length; i++) {
+            if (changeEvent.target.value === question.answers[i].text) {
+                question.answers[i].is_true ? this.props.getAnswer(question.id, true) : this.props.getAnswer(question.id, false);
+            }
+        }
+        console.log(this.state.selectedOption);
+    };
+
+    handleTextInput = (changeEvent) => {
+        this.setState({
+            text: changeEvent.target.value
+        });
+        const {question} = this.props;
+        question.answers[0].text === changeEvent.target.value ? this.props.getAnswer(question.id, true) : this.props.getAnswer(question.id, false);
     };
 
     render() {
@@ -27,21 +55,18 @@ class OneQuestion extends Component {
                 {question.type === 0 && <div>
                     <div className={styles.answers}>
                         {this.getAnswers()}
-                        {/*{this.getLabelAnswers()}*/}
                     </div>
                 </div>}
                 {question.type === 1 &&
                 <div>
-                    <input className={styles.inpt} type="text" placeholder={'Введите ответ'}/>
+                    <input onChange={this.handleTextInput} className={styles.inpt} type="text"
+                           placeholder={'Введите ответ'}/>
                 </div>}
-                <button onClick={this.handleOkClick} className={styles['btn-ok']}>OK</button>
+
             </div>
         );
     }
 
-    handleOkClick = () => {
-
-    }
 }
 
 export default OneQuestion;

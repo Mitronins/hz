@@ -39,6 +39,7 @@
     "axios": "^0.17.1",
     "babel-plugin-transform-object-rest-spread": "^6.26.0",
     "image-webpack-loader": "^4.2.0",
+    "immutable": "^3.8.2",
     "inputmask": "^3.3.11",
     "prop-types": "^15.6.1",
     "react": "^16.3.1",

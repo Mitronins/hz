@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
 import request from "../../../utils/request";
+import {Map as IMap} from 'immutable';
 
 import styles from './styles.scss';
 
@@ -13,6 +14,7 @@ class Test extends Component {
         test: {
             questions: []
         },
+        rightAnswers: {}
     };
 
     componentWillMount = () => {
@@ -29,7 +31,12 @@ class Test extends Component {
     stopTest = async () => {
         const {id} = this.props.match.params;
         const token = 'Token ' + localStorage.getItem('token');
-        const result = await request(`/api/tests/${id}/stop/`, {}, 'post', {headers: {Authorization: token}});
+        let count = 0;
+        for (let answer in this.state.rightAnswers) {
+            if (this.state.rightAnswers[answer]) count++;
+        }
+        const result = await request(`/api/tests/${id}/stop/`, {right_answers: count}, 'post', {headers: {Authorization: token}});
+        this.props.history.push('/tests');
     };
 
     getTest = async () => {
@@ -44,7 +51,7 @@ class Test extends Component {
             isError
         });
 
-
+        console.log(result.response.data);
         if (!isError) {
             this.setState({
                 test: result.response.data
@@ -52,7 +59,20 @@ class Test extends Component {
         }
     };
 
-    getQuestion = () => this.state.test.questions.map(question => <OneQuestion key={question.id} question={question} />);
+    getAnswer = (idQuestion, rightAnswer) => {
+        if (rightAnswer) {
+            this.setState({rightAnswers: {...this.state.rightAnswers, [idQuestion]: true}});
+        } else {
+            this.setState({rightAnswers: {...this.state.rightAnswers, [idQuestion]: false}});
+        }
+    };
+
+    getQuestion = () => this.state.test.questions.map(question =>
+        <OneQuestion
+            key={question.id}
+            question={question}
+            getAnswer={this.getAnswer}
+        />);
 
     render() {
         const {isLoading, test, isError} = this.state;
@@ -64,9 +84,19 @@ class Test extends Component {
                     <div className={styles.title}>{test.title}</div>
                     <div className={styles.description}>{test.description}</div>
                     <div>{this.getQuestion()}</div>
+                    <button onClick={this.handleOkClick} className={styles['btn-ok']}>OK</button>
                 </div>}
             </div>
         );
+    }
+
+    handleOkClick = () => {
+        console.log(typeof this.state.rightAnswers);
+        if (Object.keys(this.state.rightAnswers).length !== this.state.test.questions.length) {
+            alert('Ответьте на все вопросы');
+            return;
+        }
+        this.stopTest();
     }
 }
 
