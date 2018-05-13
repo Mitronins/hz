@@ -18,7 +18,7 @@
   }
 }
 
-.container:first-child{
+.container:first-child {
   margin-top: 0;
 }
 
@@ -51,7 +51,6 @@
   background-size: contain;
 }
 
-
 .spread {
   display: block;
   position: absolute;
@@ -74,7 +73,7 @@
   background-size: contain;
 }
 
-.status{
+.status {
   width: 80px;
   font-size: .9em;
   position: absolute;
@@ -82,4 +81,11 @@
   right: 10px;
   bottom: 5px;
   text-align: center;
+}
+
+.right-answer {
+  display: block;
+  position: absolute;
+  top: 10px;
+  left: 500px;
 }
