@@ -1,4 +1,4 @@
-import {AUTH, DELETE_AUTH, SET_NAME} from "../constans";
+import {AUTH, DELETE_AUTH, SET_NAME, SET_WORDS, DELETE_WORD} from "../constans";
 
 export function setToken(token) {
     return {
@@ -23,5 +23,19 @@ export function setUser(name) {
 export function deleteUser() {
     return {
         type: SET_NAME
+    }
+}
+
+export function setWords(words) {
+    return {
+        type: SET_WORDS,
+        data: {words}
+    }
+}
+
+export function deleteWord(id) {
+    return {
+        type: DELETE_WORD,
+        data: {id}
     }
 }

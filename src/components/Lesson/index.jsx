@@ -27,6 +27,7 @@ class Lesson extends Component {
         const {id} = this.props.match.params;
         const token = 'Token ' + localStorage.getItem('token');
         const result = await request(`/api/lessons/${id}/stop/`, {}, 'post', {headers: {Authorization: token}});
+        Boolean(result.response) ? this.props.history.push('/lessons') : alert('Произошла ошибка');
     };
 
     getLesson = async () => {

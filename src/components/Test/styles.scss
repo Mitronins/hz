@@ -47,5 +47,22 @@ $width-text: 800px;
 }
 
 .btn-ok {
-  margin-top: 40px;
+  display: block;
+  position: relative;
+  width: 150px;
+  height: 30px;
+  font-size: 1.2em;
+  background-color: rgba(32, 34, 86, 0.75);
+  color: white;
+  border-radius: 5px;
+  border: none;
+  outline: none;
+  top: 100px;
+  left: calc(50% - 75px);
+  cursor: pointer;
+
+  &:hover {
+    box-shadow: 0 0 15px rgba(0,0,0, .1);
+    background-color: rgba(32, 34, 86, 0.85);
+  }
 }

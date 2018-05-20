@@ -71,13 +71,30 @@ $width-text: 800px;
 .stop-lesson {
   display: block;
   position: relative;
+  width: 150px;
+  height: 30px;
+  font-size: 1.2em;
+  background-color: rgba(32, 34, 86, 0.75);
+  color: white;
+  border-radius: 5px;
+  border: none;
+  outline: none;
   top: 100px;
-  left: 100px;
+  left: calc(50% - 75px);
+  cursor: pointer;
+
+  &:hover {
+    box-shadow: 0 0 15px rgba(0,0,0, .1);
+    background-color: rgba(32, 34, 86, 0.85);
+  }
 }
 
-.success-lesson{
+.success-lesson {
   display: block;
+  width: 200px;
   position: relative;
+  left: calc(50% - 100px);
   top: 100px;
-  left: 100px;
+  text-align: center;
+  margin-bottom: 10px;
 }

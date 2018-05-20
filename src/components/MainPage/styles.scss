@@ -3,33 +3,47 @@
   position: relative;
   top: 60px;
   height: calc(100vh - 60px);
+  background-image: url("./images/main.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 
 .menu {
   display: block;
   position: relative;
   width: 1100px;
-  height: 300px;
+  height: 200px;
   left: calc(50% - 550px);
-  top: calc(30% - 150px);
-  background-color: #45b;
+  top: calc(25% - 100px);
 }
 
-.menu-element {
+.menuElement {
   display: inline-block;
   position: relative;
   width: 500px;
-  background-color: #75b;
   height: 100%;
   margin: 0 25px;
+  border-radius: 10px;
 }
 
 .dictionary {
   display: block;
   position: relative;
   width: 500px;
-  height: 300px;
-  top: 130px;
+  height: 200px;
+  top: 150px;
   left: calc(50% - 250px);
-  background-color: red;
+  background: url("./images/dictionary.jpg") no-repeat center;
+  background-size: 500px 200px;
+  border-radius: 10px;
+}
+
+.lessons {
+  background: url("./images/lessons.jpg") no-repeat center;
+  background-size:  500px 200px;
+}
+
+.tests {
+  background: url("./images/tests.jpg") no-repeat center;
+  background-size:  500px 200px;
 }

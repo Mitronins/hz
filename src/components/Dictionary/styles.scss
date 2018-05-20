@@ -4,13 +4,12 @@
   top: 60px;
   width: 1000px;
   left: calc(50% - 500px);
-
 }
 
 .inpt {
   display: block;
   position: relative;
-  width: 300px;
+  width: 400px;
   left: 50px;
   margin: 10px 0;
   height: 30px;
@@ -47,6 +46,7 @@
   height: 400px;
   display: inline-block;
   top: calc(50% - 200px);
+  left: 100px;
 
 }
 
@@ -55,5 +55,36 @@
   position: relative;
   left: 500px;
   width: 500px;
+  min-height: 100vh;
+}
 
+.btn {
+  display: block;
+  position: relative;
+  width: 150px;
+  height: 30px;
+  font-size: 1.2em;
+  background-color: rgba(32, 34, 86, 0.75);
+  color: white;
+  border-radius: 5px;
+  border: none;
+  outline: none;
+  top: 10px;
+  left: 300px;
+  cursor: pointer;
+
+  &:hover {
+    box-shadow: 0 0 15px rgba(0, 0, 0, .1);
+    background-color: rgba(32, 34, 86, 0.85);
+  }
+}
+
+.loading {
+  position: absolute;
+  display: block;
+  width: 200px;
+  height: 200px;
+  top: calc(50% - 100px);
+  left: calc(50% - 100px);
+  background: url("./images/spinner.svg") no-repeat center;
 }

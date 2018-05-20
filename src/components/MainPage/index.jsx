@@ -10,10 +10,10 @@ class MainPage extends Component {
         return (
             <div className={styles.container}>
                 <div className={styles.menu}>
-                    <Link to={'/lessons'} className={styles["menu-element"]}>Уроки</Link>
-                    <Link to={'/tests'} className={styles["menu-element"]}>Тесты</Link>
+                    <Link to={'/lessons'} className={cn(styles.menuElement, styles.lessons)} />
+                    <Link to={'/tests'} className={cn(styles.menuElement, styles.tests)}/>
                 </div>
-                <Link to={'/dictionary'} className={styles.dictionary}>Словарь</Link>
+                <Link to={'/dictionary'} className={styles.dictionary}/>
             </div>
         );
     }

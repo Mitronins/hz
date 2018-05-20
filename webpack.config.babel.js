@@ -26,9 +26,11 @@ const plugins = [
     }),
     new webpack.DefinePlugin({
         IS_PRODUCTION: isProd,
+        'process.env.NODE_ENV': JSON.stringify(isProd ? 'production' : 'development'),
     }),
     new webpack.ProvidePlugin({
         'React': 'react',
+        'cn': 'classnames'
     }),
     extractCSS
 ];

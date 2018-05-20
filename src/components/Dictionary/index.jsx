@@ -1,9 +1,11 @@
 import React, {Component} from 'react';
+import {connect} from 'react-redux';
 
 import styles from './styles.scss';
 
 import request from "../../../utils/request";
 import OneWord from './OneWord';
+import {setWords} from '../../AC';
 
 class Dictionary extends Component {
 
@@ -12,8 +14,8 @@ class Dictionary extends Component {
         ru_word: '',
         note: '',
         isError: false,
-        words: [],
         id: 0,
+        isLoading: false,
     };
 
     componentWillMount = () => {
@@ -21,15 +23,17 @@ class Dictionary extends Component {
     };
 
     getDictionary = async () => {
+        this.setState({isLoading: true});
         const token = 'Token ' + localStorage.getItem('token');
         const result = await request(`/api/dictionary/`, {}, 'get', {headers: {Authorization: token}});
+        this.setState({isLoading: false});
         const {response, error} = result;
         if (Boolean(error)) {
             this.setState({isError: true});
             return;
         }
+        this.props.setWords(response.data[0].words.reverse());
         this.setState({
-            words: response.data[0].words.reverse(),
             id: response.data[0].id
         });
     };
@@ -64,9 +68,10 @@ class Dictionary extends Component {
         }
     };
 
-    getListWords = () => this.state.words.map(word => <OneWord key={word.id} word={word}/>);
+    getListWords = () => this.props.words.map(word => <OneWord key={word.id} updateDictionary={this.getDictionary} word={word}/>);
 
     render() {
+        const {isLoading} = this.state;
         return (
             <div className={styles.container}>
                 <div className={styles['form-words']}>
@@ -78,14 +83,16 @@ class Dictionary extends Component {
                            value={this.state.ru_word}/>
                     Заметка
                     <textarea onChange={this.changeInputWord('note')} className={styles.area} value={this.state.note}/>
-                    <button onClick={this.handleAddWord}>Добавить</button>
+                    <button className={styles.btn} onClick={this.handleAddWord}>Добавить</button>
                 </div>
+
                 <div className={styles.list}>
-                    {this.getListWords()}
+                    {isLoading && <div className={styles.loading}/>}
+                    {!isLoading && this.getListWords()}
                 </div>
             </div>
         );
     }
 }
 
-export default Dictionary;
+export default connect(({words}) => ({words}), {setWords})(Dictionary);
