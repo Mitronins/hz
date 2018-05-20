@@ -2,29 +2,24 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="93a3460e-4cfe-4e05-a054-1f7b4c9dda99" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/src/components/MainPage/images/dictionary.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/MainPage/images/lessons.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/MainPage/images/tests.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/copyFavicon.sh" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/favicon/android-chrome-192x192.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/favicon/android-chrome-512x512.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/favicon/apple-touch-icon.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/favicon/browserconfig.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/favicon/favicon-16x16.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/favicon/favicon-32x32.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/favicon/favicon.ico" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/favicon/mstile-144x144.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/favicon/mstile-150x150.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/favicon/mstile-310x150.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/favicon/mstile-310x310.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/favicon/mstile-70x70.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/favicon/safari-pinned-tab.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/favicon/site.webmanifest" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/AC/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/AC/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Dictionary/OneWord/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Dictionary/OneWord/index.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Dictionary/OneWord/styles.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Dictionary/OneWord/styles.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Dictionary/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Dictionary/index.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Dictionary/styles.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Dictionary/styles.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Header/styles.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Header/styles.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Lesson/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Lesson/index.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Lesson/styles.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Lesson/styles.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/ListLessons/OneLesson/styles.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ListLessons/OneLesson/styles.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/ListTests/OneTest/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ListTests/OneTest/index.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/ListTests/OneTest/styles.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ListTests/OneTest/styles.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/MainPage/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/MainPage/index.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/MainPage/styles.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/MainPage/styles.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Test/styles.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Test/styles.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/constans.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/constans.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/reducer/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/reducer/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/webpack.config.babel.js" beforeDir="false" afterPath="$PROJECT_DIR$/webpack.config.babel.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.html" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -50,11 +45,38 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="styles.scss" pinned="false" current-in-tab="true">
+      <file leaf-file-name="styles.scss" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/components/MainPage/styles.scss">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="180">
               <caret line="31" column="13" selection-start-line="31" selection-start-column="13" selection-end-line="31" selection-end-column="13" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/index.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="198">
+              <caret line="11" column="47" lean-forward="true" selection-start-line="11" selection-start-column="47" selection-end-line="11" selection-end-column="47" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="copyFavicon.sh" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/copyFavicon.sh">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="36">
+              <caret line="2" column="6" selection-start-line="2" selection-start-column="6" selection-end-line="2" selection-end-column="6" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="package.json" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/package.json">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="144">
+              <caret line="8" column="98" selection-start-line="8" selection-start-column="98" selection-end-line="8" selection-end-column="98" />
             </state>
           </provider>
         </entry>
@@ -81,15 +103,12 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/components/Content/index.js" />
-        <option value="$PROJECT_DIR$/src/index.js" />
         <option value="$PROJECT_DIR$/src/components/Root/index.js" />
         <option value="$PROJECT_DIR$/src/components/App/index.jsx" />
         <option value="$PROJECT_DIR$/src/components/Authorization/index.jsx" />
         <option value="$PROJECT_DIR$/src/components/Content/index.jsx" />
         <option value="$PROJECT_DIR$/src/components/Root.js" />
         <option value="$PROJECT_DIR$/src/reducer/auth.js" />
-        <option value="$PROJECT_DIR$/src/index.html" />
         <option value="$PROJECT_DIR$/src/index.scss" />
         <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/src/components/Login/styles.scss" />
@@ -132,6 +151,9 @@
         <option value="$PROJECT_DIR$/src/components/Dictionary/OneWord/styles.scss" />
         <option value="$PROJECT_DIR$/src/components/Dictionary/OneWord/index.jsx" />
         <option value="$PROJECT_DIR$/src/components/MainPage/styles.scss" />
+        <option value="$PROJECT_DIR$/src/index.html" />
+        <option value="$PROJECT_DIR$/package.json" />
+        <option value="$PROJECT_DIR$/copyFavicon.sh" />
       </list>
     </option>
   </component>
@@ -170,24 +192,6 @@
               <item name="final_front" type="b2602c69:ProjectViewProjectNode" />
               <item name="final_front" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="final_front" type="b2602c69:ProjectViewProjectNode" />
-              <item name="final_front" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="final_front" type="b2602c69:ProjectViewProjectNode" />
-              <item name="final_front" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="components" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="final_front" type="b2602c69:ProjectViewProjectNode" />
-              <item name="final_front" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="components" type="462c0819:PsiDirectoryNode" />
-              <item name="MainPage" type="462c0819:PsiDirectoryNode" />
-            </path>
           </expand>
           <select />
         </subPane>
@@ -204,11 +208,11 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/favicon" />
       <recent name="$PROJECT_DIR$/src/components/Dictionary/OneWord/images" />
       <recent name="$PROJECT_DIR$/src/components/Dictionary/images" />
       <recent name="$PROJECT_DIR$/src/components/MainPage/images" />
       <recent name="$PROJECT_DIR$/src/components/Test" />
-      <recent name="$PROJECT_DIR$/src/components/ListTests" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/src/components/Dictionary/images" />
@@ -277,18 +281,18 @@
       <workItem from="1526226638110" duration="9123000" />
       <workItem from="1526301026986" duration="535000" />
       <workItem from="1526757051094" duration="668000" />
-      <workItem from="1526831706357" duration="12975000" />
+      <workItem from="1526831706357" duration="14270000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="77267000" />
+    <option name="totallyTimeSpent" value="78562000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="25" width="1366" height="743" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.35219657" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.14594193" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" order="7" sideWeight="0.5002636" side_tool="true" weight="0.35140997" />
@@ -297,7 +301,7 @@
       <window_info anchor="bottom" id="Run" order="2" weight="0.4967213" />
       <window_info id="npm" order="2" side_tool="true" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info anchor="bottom" id="Terminal" order="7" sideWeight="0.49973643" weight="0.35032538" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="7" sideWeight="0.49973643" visible="true" weight="0.4147541" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -320,7 +324,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/components/Authorization/index.jsx" />
     <entry file="file://$PROJECT_DIR$/src/store/index.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="108">
@@ -332,13 +335,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="54">
           <caret line="3" column="36" selection-start-line="3" selection-start-column="36" selection-end-line="3" selection-end-column="36" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="36">
-          <caret line="2" column="85" selection-start-line="2" selection-start-column="85" selection-end-line="2" selection-end-column="85" />
         </state>
       </provider>
     </entry>
@@ -429,13 +425,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="162">
           <caret line="9" column="7" lean-forward="true" selection-start-line="9" selection-start-column="7" selection-end-line="9" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/package.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-48">
-          <caret line="12" column="7" selection-start-line="12" selection-start-column="7" selection-end-line="12" selection-end-column="7" />
         </state>
       </provider>
     </entry>
@@ -681,6 +670,27 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="180">
           <caret line="31" column="13" selection-start-line="31" selection-start-column="13" selection-end-line="31" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="198">
+          <caret line="11" column="47" lean-forward="true" selection-start-line="11" selection-start-column="47" selection-end-line="11" selection-end-column="47" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/package.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="144">
+          <caret line="8" column="98" selection-start-line="8" selection-start-column="98" selection-end-line="8" selection-end-column="98" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/copyFavicon.sh">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="36">
+          <caret line="2" column="6" selection-start-line="2" selection-start-column="6" selection-end-line="2" selection-end-column="6" />
         </state>
       </provider>
     </entry>

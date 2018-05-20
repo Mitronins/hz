@@ -6,7 +6,7 @@
   "scripts": {
     "clean": "rimraf dist",
     "start": "npm run clean && babel-node devServer.js",
-    "build": "npm run clean && NODE_ENV=production webpack --config ./webpack.config.babel.js"
+    "build": "npm run clean && NODE_ENV=production webpack --config ./webpack.config.babel.js && . ./copyFavicon.sh"
   },
   "author": "mitronin",
   "license": "MIT",
