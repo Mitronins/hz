@@ -53,7 +53,7 @@ class Lesson extends Component {
         return lesson.chapters.map(chapter =>
             <div key={chapter.id}>
                 <div className={styles.chapter}>{chapter.title}</div>
-                <div className={styles.text}>{chapter.text}</div>
+                <div className={styles.text}><pre>{chapter.text}</pre></div>
             </div>)
     };
 
