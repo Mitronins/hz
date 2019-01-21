@@ -3,7 +3,10 @@ import axios from 'axios';
 
 export default async (url, data = {}, methodType = 'GET', config={}) => {
     const method = methodType.toLowerCase();
-    const { headers={} } = config;
+    const tokenLocal = localStorage.getItem('token') ? localStorage.getItem('token') : null;
+    const { headers={
+        Authorization: tokenLocal && `Bearer ${tokenLocal}`
+    } } = config;
 
     if(method === 'get'){
         config.params = data;

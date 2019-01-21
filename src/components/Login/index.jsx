@@ -87,11 +87,11 @@ class Login extends Component {
                     onClick={this.handleLogin}>
                     Login
                 </button>
-                <Link
-                    className={styles.register}
-                    to={'/register'}>
-                    Регистрация
-                </Link>
+                {/*<Link*/}
+                    {/*className={styles.register}*/}
+                    {/*to={'/register'}>*/}
+                    {/*Регистрация*/}
+                {/*</Link>*/}
                 {this.state.isFalseLogin && <div className={styles.err}>Неверные данные</div>}
                 {this.state.isEmptyFields && <div className={styles.err}>Заполните все поля</div>}
             </div>

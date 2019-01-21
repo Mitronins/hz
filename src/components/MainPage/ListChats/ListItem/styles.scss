@@ -1,0 +1,35 @@
+$back: rgba(0, 0, 0, .2);
+.container {
+  height: 80px;
+  width: 100%;
+  border-bottom: 1px solid $back;
+  flex-shrink: 0;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+
+  &:hover {
+    background-color: darken($back, 5%);
+    transition: background-color .2s ease-out;
+  }
+}
+
+.id {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: darkorange;
+  margin-left: 10px;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 10px;
+}
+
+.msg {
+  margin-left: 20px;
+  overflow: auto;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}

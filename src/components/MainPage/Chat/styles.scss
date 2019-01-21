@@ -1,0 +1,19 @@
+.container {
+  width: calc(100% - 340px);
+  height: 100%;
+  display: flex;
+  background-color: #5d93e6;
+  flex-shrink: 0;
+  flex-grow: 1;
+  flex-direction: column;
+}
+
+.chat {
+  flex-grow: 1;
+}
+
+.inp {
+  margin: 20px;
+  border-radius: 5px;
+  height: 40px;
+}
